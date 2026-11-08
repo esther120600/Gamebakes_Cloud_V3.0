@@ -17,5 +17,6 @@
         <module>servicio-perfil</module>
         <module>servicio-productos</module>
         <module>servicio-pagos</module>
+        <module>servicio-kafka-admin</module>
     </modules>
 </project>
