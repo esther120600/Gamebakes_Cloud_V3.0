@@ -36,6 +36,12 @@
             <artifactId>spring-kafka</artifactId>
         </dependency>
 
+        <!-- Seguridad JWT (Entra ID y Cognito), igual que el resto de los servicios -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
