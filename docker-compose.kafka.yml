@@ -1,6 +1,8 @@
-# GameBakes EP3 - Cluster Kafka: 3 Zookeeper + 3 Brokers + Kafka-UI
-# Uso:  KAFKA_HOST=<IP_PUBLICA_EC2> docker-compose -f docker-compose.kafka.yml up -d
-# (en local basta con: docker-compose -f docker-compose.kafka.yml up -d)
+# GameBakes EP3 - Cluster Kafka: 3 Zookeeper + 3 Brokers + Kafka-UI + servicio-kafka-admin
+# Uso en EC2:  KAFKA_HOST=<IP_PRIVADA_EC2> docker-compose -f docker-compose.kafka.yml up -d --build
+# (en local basta con: docker-compose -f docker-compose.kafka.yml up -d --build)
+# Requisito: compilar antes el jar del admin:
+#   cd servicios-backend/servicio-kafka-admin && ./mvnw clean package -Dmaven.test.skip=true
 
 x-zk: &zk-common
   image: confluentinc/cp-zookeeper:7.5.0
@@ -149,3 +151,14 @@ services:
       KAFKA_CLUSTERS_0_NAME: gamebakes
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka-1:29092,kafka-2:29092,kafka-3:29092
       KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
+
+  # ---------- MICROSERVICIO ADMIN DE KAFKA ----------
+  servicio-kafka-admin:
+    build: ./servicios-backend/servicio-kafka-admin
+    container_name: servicio-kafka-admin
+    restart: unless-stopped
+    depends_on: [kafka-1, kafka-2, kafka-3]
+    ports:
+      - "8087:8087"
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka-1:29092,kafka-2:29092,kafka-3:29092
