@@ -1,5 +1,6 @@
 package com.example.serviciopagos.Service;
 
+import com.example.serviciopagos.DTO.PagoExitosoDTO;
 import com.example.serviciopagos.DTO.SolicitudPagoDTO;
 import com.example.serviciopagos.Model.Pago;
 import com.example.serviciopagos.Model.CarritoItem;
@@ -13,6 +14,7 @@ import com.mercadopago.resources.preference.Preference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -68,7 +70,6 @@ public class PagoService {
             List<PreferenceItemRequest> items = new ArrayList<>();
             items.add(itemRequest);
 
-            // SIN RUTAS NI AUTORETURN. Funciona perfecto.
             PreferenceRequest preferenceRequest = PreferenceRequest.builder()
                     .items(items)
                     .externalReference(pago.getIdPago().toString())
@@ -125,7 +126,6 @@ public class PagoService {
                         .build());
             }
 
-            // SIN RUTAS NI AUTORETURN. Funciona perfecto.
             PreferenceRequest preferenceRequest = PreferenceRequest.builder()
                     .items(itemsPreference)
                     .externalReference(pago.getIdPago().toString())
@@ -169,20 +169,31 @@ public class PagoService {
         pagoInfo.put("monto", pago.getMonto());
         pagoInfo.put("transaccionId", pago.getTransaccionId());
 
+        PagoExitosoDTO pagoDTO = new PagoExitosoDTO();
+        pagoDTO.setClienteId(pago.getClienteId());
+        pagoDTO.setClienteNombre(nombreUsuario);
+        pagoDTO.setMonto(pago.getMonto());
+        pagoDTO.setTransaccionId(pago.getTransaccionId());
+
         if (pago.getProductoId() != null) {
             pagoInfo.put("productoId", pago.getProductoId());
             pagoInfo.put("cantidad", pago.getCantidad());
+
+            pagoDTO.setProductoId(pago.getProductoId());
+            pagoDTO.setCantidad(pago.getCantidad());
         } else {
             List<CarritoItem> items = carritoService.listarPorCliente(pago.getClienteId());
             pagoInfo.put("items", items);
+
+            pagoDTO.setItems(items);
         }
 
         try {
-            com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
+            ObjectMapper mapper = new ObjectMapper();
             String jsonPago = mapper.writeValueAsString(pagoInfo);
-            pagoEventPublisher.publicarPagoExitoso(jsonPago);
+            pagoEventPublisher.publicarPagoExitoso(jsonPago, pagoDTO);
         } catch (Exception e) {
-            throw new RuntimeException("Error al convertir pagoInfo a JSON", e);
+            System.err.println("Error al publicar evento de pago: " + e.getMessage());
         }
 
         carritoService.limpiarCarrito(pago.getClienteId());
