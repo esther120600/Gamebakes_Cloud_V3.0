@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bd1e462-44e4-4aca-9a9b-ab0db1278c0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java/com/example/serviciopagos/DTO/PagoExitosoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Config/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/DTO/CarritoItemDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/DTO/PagoExitosoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Service/PagoExitosoKafkaListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pagos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pagos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java/com/example/serviciopagos/Service/PagoEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java/com/example/serviciopagos/Service/PagoEventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java/com/example/serviciopagos/Service/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java/com/example/serviciopagos/Service/PagoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Config/SqsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Service/PagoExitosoSqsListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +204,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServicioKafkaAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="servicio-kafka-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.serviciokafkaadmin.ServicioKafkaAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServicioPagosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="servicio-pagos" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.serviciopagos.ServicioPagosApplication" />
@@ -320,7 +332,7 @@
       <workItem from="1791417229917" duration="3474000" />
       <workItem from="1791506035124" duration="655000" />
       <workItem from="1791656935561" duration="4398000" />
-      <workItem from="1794173485119" duration="1230000" />
+      <workItem from="1794173485119" duration="3755000" />
     </task>
     <servers />
   </component>
