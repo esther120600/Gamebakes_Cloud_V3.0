@@ -14,7 +14,7 @@ public class PagoExitosoKafkaListener {
     @Autowired
     private ProductoService productoService;
 
-    @KafkaListener(topics = "eventos-pago", groupId = "grupo-productos")
+    @KafkaListener(topics = "pagos-eventos", groupId = "grupo-productos")
     public void procesarPagoExitoso(PagoExitosoDTO pagoDTO) {
         try {
             log.info("Recibido evento pago.exitoso para cliente: {}", pagoDTO.getClienteId());

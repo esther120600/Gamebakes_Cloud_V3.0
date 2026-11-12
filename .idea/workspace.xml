@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bd1e462-44e4-4aca-9a9b-ab0db1278c0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Config/KafkaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/DTO/CarritoItemDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/DTO/PagoExitosoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Service/PagoExitosoKafkaListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-pedidos/src/main/java/com/gamebakes/servicio_pedidos/DTO/PedidoEstadoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/java/com/gamebakes/servicio_resenas/DTO/PedidoEstadoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/java/com/gamebakes/servicio_resenas/model/AutorizacionResena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/java/com/gamebakes/servicio_resenas/repository/AutorizacionResenaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/java/com/gamebakes/servicio_resenas/service/PedidoEstadoKafkaListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Config/SqsConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Service/PagoExitosoSqsListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java/com/example/serviciopagos/Service/PagoEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java/com/example/serviciopagos/Service/PagoEventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pedidos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pedidos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pedidos/src/main/java/com/gamebakes/servicio_pedidos/service/PedidoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pedidos/src/main/java/com/gamebakes/servicio_pedidos/service/PedidoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-pedidos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-pedidos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Service/PagoExitosoKafkaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-productos/src/main/java/com/example/servicioproductos/Service/PagoExitosoKafkaListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/java/com/gamebakes/servicio_resenas/service/ResenaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/java/com/gamebakes/servicio_resenas/service/ResenaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/servicios-backend/servicio-resenas/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +46,12 @@
     &quot;assignee&quot;: &quot;LiuCho123&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/esther120600/Gamebakes_Cloud_V3.0.git",
-    "accountId": "5200e6fd-aae8-4ad5-8d63-b7c0f22ae2af"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/esther120600/Gamebakes_Cloud_V3.0.git&quot;,
+    &quot;accountId&quot;: &quot;5200e6fd-aae8-4ad5-8d63-b7c0f22ae2af&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -69,54 +71,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.PagoServiceTest.executor": "Run",
-    "Maven.api-gateway [clean].executor": "Run",
-    "Maven.api-gateway [package].executor": "Run",
-    "Maven.servicio-pagos [clean].executor": "Run",
-    "Maven.servicio-pagos [package].executor": "Run",
-    "Maven.servicio-pedidos [clean].executor": "Run",
-    "Maven.servicio-pedidos [package].executor": "Run",
-    "Maven.servicio-perfil [clean].executor": "Run",
-    "Maven.servicio-perfil [package].executor": "Run",
-    "Maven.servicio-productos [clean].executor": "Run",
-    "Maven.servicio-productos [package].executor": "Run",
-    "Maven.servicio-resenas [clean].executor": "Run",
-    "Maven.servicio-resenas [package].executor": "Run",
-    "Maven.servicio-usuarios [clean].executor": "Run",
-    "Maven.servicio-usuarios [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.ServicioCatalogoApplication.executor": "Run",
-    "Spring Boot.ServicioPagosApplication.executor": "Run",
-    "Spring Boot.ServicioPedidosApplication.executor": "Run",
-    "Spring Boot.ServicioPerfilApplication.executor": "Run",
-    "Spring Boot.ServicioProductosApplication.executor": "Run",
-    "Spring Boot.ServicioResenasApplication.executor": "Run",
-    "Spring Boot.ServicioUsuariosApplication.executor": "Run",
-    "git-widget-placeholder": "feature/Luis",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/luise/Desktop/Proyectos Programacion/Gamebakes/Gamebakes_Cloud_V3.0",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.PagoServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-pagos [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-pagos [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-pedidos [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-pedidos [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-perfil [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-perfil [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-productos [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-productos [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-resenas [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-resenas [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-usuarios [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.servicio-usuarios [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicioCatalogoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicioPagosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicioPedidosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicioPerfilApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicioProductosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicioResenasApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicioUsuariosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/Luis&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luise/Desktop/Proyectos Programacion/Gamebakes/Gamebakes_Cloud_V3.0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -332,7 +334,8 @@
       <workItem from="1791417229917" duration="3474000" />
       <workItem from="1791506035124" duration="655000" />
       <workItem from="1791656935561" duration="4398000" />
-      <workItem from="1794173485119" duration="3755000" />
+      <workItem from="1794173485119" duration="4430000" />
+      <workItem from="1794444990330" duration="2555000" />
     </task>
     <servers />
   </component>
