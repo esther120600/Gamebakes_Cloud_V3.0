@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/servicios-backend/api-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicios-backend/servicio-catalogo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servicios-backend/servicio-kafka-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicios-backend/servicio-pagos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicios-backend/servicio-pedidos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicios-backend/servicio-perfil/src/main/java" charset="UTF-8" />

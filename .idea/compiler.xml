@@ -10,6 +10,7 @@
         <module name="servicio-pedidos" />
         <module name="servicio-perfil" />
         <module name="servicio-resenas" />
+        <module name="servicio-kafka-admin" />
         <module name="api-gateway" />
         <module name="servicio-productos" />
         <module name="servicio-usuarios" />
@@ -23,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="servicio-catalogo" options="-parameters" />
+      <module name="servicio-kafka-admin" options="-parameters" />
       <module name="servicio-pagos" options="-parameters" />
       <module name="servicio-pedidos" options="-parameters" />
       <module name="servicio-perfil" options="-parameters" />

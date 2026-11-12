@@ -2,6 +2,7 @@ package com.gamebakes.servicio_resenas.service;
 
 import com.gamebakes.servicio_resenas.client.PedidoClient;
 import com.gamebakes.servicio_resenas.model.Resena;
+import com.gamebakes.servicio_resenas.repository.AutorizacionResenaRepository;
 import com.gamebakes.servicio_resenas.repository.ResenaRepository;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class ResenaService {
 
     @Autowired
     private PedidoClient pedidoClient;
+
+    @Autowired
+    private AutorizacionResenaRepository autorizacionRepository;
 
     //CLIENTE: Obtener reseñas por producto con Circuit Breaker
     @CircuitBreaker(name = "resenaCB", fallbackMethod = "fallbackResenas")
@@ -39,25 +43,14 @@ public class ResenaService {
 
     //Lógica para guardar reseña con validación de compra y estado entregado
     public Resena guardarResena(Resena resena) {
-        System.out.println("=== CREANDO RESEÑA ===");
+        System.out.println("--- CREANDO RESEÑA ---");
         System.out.println("Cliente ID: " + resena.getClienteId());
         System.out.println("Producto ID: " + resena.getProductoId());
-        System.out.println("Vendedor ID: " + resena.getVendedorId());
-        System.out.println("Comentario: " + resena.getComentario());
-        System.out.println("Estrellas: " + resena.getEstrellas());
 
-        // Validar que el cliente compró el producto antes de permitir la reseña
-        boolean comprado = pedidoClient.validarCompra(resena.getClienteId(), resena.getProductoId());
-        System.out.println("Validación compra: " + comprado);
-        if (!comprado) {
-            throw new RuntimeException("El cliente no ha comprado este producto. No puede dejar una reseña.");
-        }
+        boolean autorizado = autorizacionRepository.existsByClienteIdAndProductoId(resena.getClienteId(), resena.getProductoId());
 
-        // Validar que el pedido esté entregado antes de permitir la reseña
-        boolean entregado = pedidoClient.validarEntregado(resena.getClienteId(), resena.getProductoId());
-        System.out.println("Validación entregado: " + entregado);
-        if (!entregado) {
-            throw new RuntimeException("El pedido aún no ha sido entregado. Solo puede reseñar productos entregados.");
+        if (!autorizado) {
+            throw new RuntimeException("No autorizado. El cliente no ha comprado este producto o el pedido aun no ha sido entregado");
         }
 
         Resena nueva = resenaRepository.save(resena);

@@ -21,7 +21,7 @@ public class PagoEventPublisher {
     @Value("${gamebakes.sqs.queue-pago-exitoso}")
     private String sqsQueueUrl;
 
-    private static final String KAFKA_TOPIC_PAGOS = "eventos-pago";
+    private static final String KAFKA_TOPIC_PAGOS = "pagos-eventos";
 
     public void publicarPagoExitoso(String jsonPago, PagoExitosoDTO pagoDTO) {
         // Publicar a RabbitMQ (mantener sin cambios)
