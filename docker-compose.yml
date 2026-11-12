@@ -38,6 +38,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://172.31.28.229:3306/gb_resenas
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
+      - KAFKA_BROKERS=172.31.31.142:9092 # Nueva conexión Kafka
 
   servicio-pedidos:
     build: ./servicios-backend/servicio-pedidos
@@ -52,6 +53,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_RABBITMQ_HOST=rabbitmq_global
+      - KAFKA_BROKERS=172.31.31.142:9092 # Nueva conexión Kafka
 
   servicio-perfil:
     build: ./servicios-backend/servicio-perfil
@@ -76,6 +78,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_RABBITMQ_HOST=rabbitmq_global
+      - KAFKA_BROKERS=172.31.31.142:9092 # Nueva conexión Kafka
 
   servicio-pagos:
     build: ./servicios-backend/servicio-pagos
@@ -90,6 +93,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_RABBITMQ_HOST=rabbitmq_global
+      - KAFKA_BROKERS=172.31.31.142:9092 # Nueva conexión Kafka
 
   frontend-react:
     build: ./gamebakes-web
