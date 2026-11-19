@@ -137,6 +137,11 @@ services:
           --topic pedidos-estado --partitions 3 --replication-factor 3 \
           --config cleanup.policy=compact --config min.insync.replicas=2
 
+        # Topic de errores (Dead Letter Topic) de pagos-eventos: mismas 3 particiones que el original
+        kafka-topics --bootstrap-server kafka-1:29092 --create --if-not-exists \
+          --topic pagos-eventos.DLT --partitions 3 --replication-factor 3 \
+          --config retention.ms=604800000 --config min.insync.replicas=2
+
         kafka-topics --bootstrap-server kafka-1:29092 --list
 
   # ---------- KAFKA-UI ----------
