@@ -38,10 +38,10 @@ public class SecurityConfig {
     private String entraAudience;
 
     // Clientes: AWS Cognito
-    @Value("${gamebakes.security.cognito.issuer-uri:https://cognito-idp.us-east-1.amazonaws.com/us-east-1_9yC743Mat}")
+    @Value("${gamebakes.security.cognito.issuer-uri:https://cognito-idp.us-east-1.amazonaws.com/us-east-1_0POxmWT2f}")
     private String cognitoIssuer;
 
-    @Value("${gamebakes.security.cognito.client-id:3ame0te5h3etk29lbtbcc9cdkc}")
+    @Value("${gamebakes.security.cognito.client-id:6hh6n5cffb2mqo9q65dicuce80}")
     private String cognitoClientId;
 
     @Bean
