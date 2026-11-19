@@ -1,0 +1,13 @@
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\DTO\ActualizarConfigRequest.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\Handler\GlobalExceptionHandler.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\DTO\LagInfo.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\DTO\GrupoInfo.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\Config\KafkaAdminConfig.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\DTO\CrearTopicRequest.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\DTO\ParticionInfo.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\ServicioKafkaAdminApplication.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\DTO\AumentarParticionesRequest.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\DTO\TopicInfo.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\Service\KafkaAdminService.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\Controller\KafkaAdminController.java
+C:\Users\franc\OneDrive\Escritorio\GameBakes_V3\Gamebakes_Cloud_V3.0\servicios-backend\servicio-kafka-admin\src\main\java\com\example\serviciokafkaadmin\Config\SecurityConfig.java
