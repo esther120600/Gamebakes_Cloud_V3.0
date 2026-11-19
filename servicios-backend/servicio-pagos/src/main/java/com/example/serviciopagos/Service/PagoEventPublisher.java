@@ -2,10 +2,8 @@ package com.example.serviciopagos.Service;
 
 import com.example.serviciopagos.Config.RabbitMQConfig;
 import com.example.serviciopagos.DTO.PagoExitosoDTO;
-import io.awspring.cloud.sqs.operations.SqsTemplate;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
@@ -18,8 +16,8 @@ public class PagoEventPublisher {
     @Autowired
     private KafkaTemplate<String, PagoExitosoDTO> kafkaTemplate;
 
-    @Value("${gamebakes.sqs.queue-pago-exitoso}")
-    private String sqsQueueUrl;
+    @Autowired
+    private KinesisEventPublisher kinesisEventPublisher;
 
     private static final String KAFKA_TOPIC_PAGOS = "pagos-eventos";
 
@@ -34,5 +32,8 @@ public class PagoEventPublisher {
         } catch (Exception e) {
             System.out.println("[Kafka] Error al enviar pago exitoso: ]" + e.getMessage());
         }
+
+        // Publicar a AWS Kinesis (paralelo, no afecta al flujo si falla)
+        kinesisEventPublisher.publicarPagoExitoso(jsonPago, pagoDTO.getClienteId());
     }
 }
