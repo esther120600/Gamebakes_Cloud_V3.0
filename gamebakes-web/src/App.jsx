@@ -61,7 +61,7 @@ function App() {
     }, []);
 
     const handleLoginCognito = () => {
-        const cognitoDomain = "https://us-east-19yc743mat.auth.us-east-1.amazoncognito.com";
+        const cognitoDomain = "https://us-east-10poxmwt2f.auth.us-east-1.amazoncognito.com";
         const clientId = import.meta.env.VITE_COGNITO_CLIENT_ID;
         const redirectUri = window.location.origin;
         window.location.href = `${cognitoDomain}/login?client_id=${clientId}&response_type=token&scope=email+openid+profile&redirect_uri=${redirectUri}`;
