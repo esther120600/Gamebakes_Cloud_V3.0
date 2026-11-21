@@ -16,6 +16,8 @@
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.3</spring-cloud.version>
+        <httpclient5.version>5.4.3</httpclient5.version>
+        <httpcore5.version>5.3.4</httpcore5.version>
     </properties>
 
     <dependencyManagement>
