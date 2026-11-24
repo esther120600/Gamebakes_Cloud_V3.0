@@ -77,6 +77,9 @@ services:
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_RABBITMQ_HOST=rabbitmq_global
       - KAFKA_BROKERS=172.31.32.152:9092
+      - KINESIS_ENABLED=${KINESIS_ENABLED:-true}
+      - KINESIS_STREAM=${KINESIS_STREAM:-gamebakes-eventos}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
 
   servicio-pagos:
     build: ./servicios-backend/servicio-pagos
@@ -92,6 +95,9 @@ services:
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_RABBITMQ_HOST=rabbitmq_global
       - KAFKA_BROKERS=172.31.32.152:9092
+      - KINESIS_ENABLED=${KINESIS_ENABLED:-true}
+      - KINESIS_STREAM=${KINESIS_STREAM:-gamebakes-eventos}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
 
   frontend-react:
     build: ./gamebakes-web
